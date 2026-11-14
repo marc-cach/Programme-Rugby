@@ -1,0 +1,17 @@
+{
+  "name": "mon-prog-rugby",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Programme TV rugby avec équipes favorites",
+  "scripts": {
+    "sync": "cap sync android"
+  },
+  "dependencies": {
+    "@capacitor/android": "6.2.2",
+    "@capacitor/core": "6.2.2"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "6.2.2",
+    "linkedom": "^0.18.15"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "appId": "app.monprogrugby",
+  "appName": "Mon Prog Rugby",
+  "webDir": "www",
+  "plugins": { "CapacitorHttp": { "enabled": true } },
+  "android": { "backgroundColor": "#140d0e" }
+}
