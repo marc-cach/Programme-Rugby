@@ -1,4 +1,4 @@
-// Lecture de agendatv-rugby.com : HTML -> { "AAAA-MM-JJ": "heure|domicile|extérieur|chaînes|compétition\n..." }
+// Lecture de agendatv-rugby.com : HTML -> { "AAAA-MM-JJ": "heure|domicile|extérieur|chaînes (séparées par " / ")|compétition\n..." }
 // Utilisé par l'appli (navigateur) et par scripts/releve.mjs (Node + linkedom).
 (function (root) {
   const MOIS = ["janvier","fevrier","mars","avril","mai","juin","juillet","aout","septembre","octobre","novembre","decembre"];
@@ -89,7 +89,7 @@
       // compétition
       let comp = "";
       const ci = b.querySelector('img[src*="logos_competitions"]');
-      if (ci) comp = sp(ci.getAttribute("alt") || ci.getAttribute("title") || "");
+      if (ci) comp = sp(ci.getAttribute("alt") || ci.getAttribute("title") || "").replace(/^programme tv\s*/i, "");
       // équipes : liens portant un logo de club, sinon autres liens texte
       const links = Array.from(b.querySelectorAll("a[href]")).filter(x => !isDiff(x));
       const clubHrefs = new Set(links.filter(x => x.querySelector('img[src*="photos_fiches"]')).map(x => x.getAttribute("href")));
@@ -123,7 +123,7 @@
           s.split(/\s*\/\s*|\s+et\s+/).forEach(c => chans.push(chanName(c)));
         }
       }
-      const line = [t, clean(teams[0]), clean(teams[1]), [...new Set(chans.filter(Boolean))].map(clean).join("+") || "?", clean(comp)].join("|");
+      const line = [t, clean(teams[0]), clean(teams[1]), [...new Set(chans.filter(Boolean))].map(clean).join(" / ") || "?", clean(comp)].join("|");
       (days[day] ||= []).push(line);
     }
     const out = {}, from = iso(new Date(now.getFullYear(), now.getMonth(), now.getDate() - 1));
