@@ -1,0 +1,51 @@
+39 matchs
+== 2026-11-14
+12:40|Italie|Argentine|TFX|Nations Championship
+15:10|Pays de Galles|Nouvelle-Zelande|TF1|Nations Championship
+17:40|Angleterre|Japon|TFX|Nations Championship
+21:10|Irlande|Fidji|TFX|Nations Championship
+== 2026-11-15
+16:10|Ecosse|Australie|TF1|Nations Championship
+== 2026-11-19
+21:00|Grenoble|Provence Rugby|Canal+ Sport|Pro D2
+== 2026-11-20
+19:00|Montauban|Agen|Canal+ Sport|Pro D2
+19:30|Aurillac|Colomiers|Canal+ Live|Pro D2
+19:30|Beziers|Dax|Canal+ Live|Pro D2
+19:30|Nevers|Angouleme|Canal+ Live|Pro D2
+19:30|Nice|Valence Romans|Canal+ Live|Pro D2
+21:00|Biarritz|Narbonne|Canal+ Live|Pro D2
+21:00|Oyonnax|Brive|Canal+ Sport|Pro D2
+== 2026-11-21
+15:10|Angleterre|Nouvelle-Zelande|TF1|Nations Championship
+17:40|Irlande|Afrique Du Sud|TF1|Nations Championship
+21:00|France|Argentine|TF1|Nations Championship
+== 2026-11-26
+21:00|Brive|Biarritz|Canal+ Sport|Pro D2
+== 2026-11-27
+19:00|Dax|Oyonnax|Canal+ Sport 360|Pro D2
+19:30|Agen|Beziers|Canal+ Live|Pro D2
+19:30|Colomiers|Nevers|Canal+ Live|Pro D2
+19:30|Valence Romans|Aurillac|Canal+ Live|Pro D2
+19:30|Angouleme|Nice|Canal+ Live|Pro D2
+21:00|Provence Rugby|Montauban|Canal+ Sport 360|Pro D2
+21:00|Narbonne|Grenoble|Canal+ Live|Pro D2
+== 2026-11-28
+14:30|UBB Bordeaux|Montpellier|Canal+|Top 14
+16:35|Bayonne|Castres|Canal+ / Canal+ Live|Top 14
+16:35|La Rochelle|Perpignan|Canal+ / Canal+ Live|Top 14
+16:35|Stade Francais|Vannes|Canal+ / Canal+ Sport 360|Top 14
+16:35|Racing 92|Pau|Canal+ / Canal+ Live|Top 14
+21:00|Lyon OU|Toulouse|Canal+ / Canal+ Live|Top 14
+== 2026-11-29
+21:05|Clermont|Toulon|Canal+|Top 14
+== 2026-12-03
+21:00|Biarritz|Provence Rugby|Canal+ Sport|Pro D2
+== 2026-12-04
+19:00|Beziers|Brive|Canal+ Sport|Pro D2
+19:30|Aurillac|Angouleme|Canal+ Live|Pro D2
+19:30|Montauban|Valence Romans|Canal+ Live|Pro D2
+19:30|Nevers|Dax|Canal+ Live|Pro D2
+19:30|Nice|Colomiers|Canal+ Live|Pro D2
+21:00|Narbonne|Agen|Canal+ Live|Pro D2
+21:00|Oyonnax|Grenoble|Canal+ Sport|Pro D2
