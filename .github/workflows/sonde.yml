@@ -1,0 +1,25 @@
+name: Sonde classement
+on:
+  push:
+    branches: [sonde]
+permissions:
+  contents: write
+jobs:
+  s:
+    runs-on: ubuntu-latest
+    steps:
+      - env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir out && cd out
+          UA="Mozilla/5.0 (Linux; Android 14) AppleWebKit/537.36 Chrome/130 Mobile Safari/537.36"
+          g(){ curl -sSL -m 30 -A "$UA" -o "$1" -w "$1 %{http_code} %{size_download}\n" "$2" >> codes.txt || echo "$1 FAIL" >> codes.txt; }
+          g orange-top14.html https://sports.orange.fr/rugby/top-14/classement-equipes.html
+          g orange-prod2.html https://sports.orange.fr/rugby/pro-d2/classement-equipes.html
+          g lnr-top14.html https://top14.lnr.fr/classement
+          g lnr-prod2.html https://prod2.lnr.fr/classement
+          g lequipe-top14.html https://www.lequipe.fr/Rugby/top-14/page-classement-equipes/general
+          g lequipe-prod2.html https://www.lequipe.fr/Rugby/pro-d2/page-classement-equipes/general
+          cat codes.txt
+          git init -q -b sonde-out && git add . && git -c user.name=gha -c user.email=gha@users.noreply.github.com commit -qm out
+          git push -qf "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}" sonde-out
