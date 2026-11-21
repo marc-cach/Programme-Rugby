@@ -1,0 +1,55 @@
+43 matchs
+== 2026-11-21
+15:10|Angleterre|Nouvelle-Zelande|?|Nations Championship
+17:40|Irlande|Afrique Du Sud|?|Nations Championship
+21:00|France|Argentine|TF1|Nations Championship
+== 2026-11-26
+21:00|Brive|Biarritz|Canal+ Sport|Pro D2
+== 2026-11-27
+19:00|Dax|Oyonnax|Canal+ Sport 360|Pro D2
+19:30|Agen|Beziers|Canal+ Live 2|Pro D2
+19:30|Colomiers|Nevers|Canal+ Live 5|Pro D2
+19:30|Valence Romans|Aurillac|Canal+ Live 6|Pro D2
+19:30|Angouleme|Nice|Canal+ Live 4|Pro D2
+21:00|Provence Rugby|Montauban|Canal+ Sport 360|Pro D2
+21:00|Narbonne|Grenoble|Canal+ Live 3|Pro D2
+== 2026-11-28
+14:30|UBB Bordeaux|Montpellier|Canal+|Top 14
+16:35|Bayonne|Castres|Canal+ / Canal+ Live|Top 14
+16:35|La Rochelle|Perpignan|Canal+ / Canal+ Live|Top 14
+16:35|Stade Francais|Vannes|Canal+ / Canal+ Sport 360|Top 14
+16:35|Racing 92|Pau|Canal+ / Canal+ Live|Top 14
+21:00|Lyon OU|Toulouse|Canal+ / Canal+ Live|Top 14
+== 2026-11-29
+21:05|Clermont|Toulon|Canal+|Top 14
+== 2026-12-03
+21:00|Biarritz|Provence Rugby|Canal+ Sport|Pro D2
+== 2026-12-04
+19:00|Beziers|Brive|Canal+ Sport|Pro D2
+19:30|Aurillac|Angouleme|Canal+ Live|Pro D2
+19:30|Montauban|Valence Romans|Canal+ Live|Pro D2
+19:30|Nevers|Dax|Canal+ Live|Pro D2
+19:30|Nice|Colomiers|Canal+ Live|Pro D2
+21:00|Narbonne|Agen|Canal+ Live|Pro D2
+21:00|Oyonnax|Grenoble|Canal+ Sport|Pro D2
+== 2026-12-05
+14:30|Toulouse|Racing 92|Canal+ Sport 360|Top 14
+16:35|Perpignan|Clermont|Canal+ / Canal+ Live|Top 14
+16:35|Vannes|Bayonne|Canal+ / Canal+ Live|Top 14
+16:35|Castres|Lyon OU|Canal+ / Canal+ Live|Top 14
+16:35|Montpellier|La Rochelle|Canal+ / Canal+ Sport|Top 14
+21:00|Pau|Stade Francais|Canal+ / Canal+ Live|Top 14
+== 2026-12-06
+21:05|Toulon|UBB Bordeaux|Canal+|Top 14
+== 2026-12-10
+21:00|Provence Rugby|Brive|Canal+ Sport|Pro D2
+== 2026-12-11
+19:00|Colomiers|Montauban|Canal+ Sport|Pro D2
+19:30|Angouleme|Beziers|Canal+ Live|Pro D2
+19:30|Grenoble|Nevers|Canal+ Live|Pro D2
+19:30|Valence Romans|Narbonne|Canal+ Live|Pro D2
+19:30|Nice|Oyonnax|Canal+ Live|Pro D2
+21:00|Agen|Aurillac|Canal+ Live|Pro D2
+21:00|Dax|Biarritz|Canal+ Sport|Pro D2
+21:00|Stade Francais|Northampton|Bein|Champions Cup
+21:00|Glasgow|Pau|Bein|Champions Cup
