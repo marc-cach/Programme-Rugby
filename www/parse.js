@@ -146,13 +146,34 @@
   function parseClassement(html, DP) {
     const doc = new (DP || root.DOMParser)().parseFromString(html, "text/html");
     const out = [];
-    for (const tr of Array.from(doc.querySelectorAll("table.classement tr, table tr"))) {
-      const td = Array.from(tr.querySelectorAll("td")).map(x => sp(x.textContent));
-      if (td.length < 8) continue;
-      const pos = parseInt(td[0], 10), num = i => parseInt(td[i].replace(/[^\d-]/g, ""), 10);
-      if (!pos || !td[1]) continue;
-      if (out.some(r => r.pos === pos && r.club === clubName(td[1]))) continue;
-      out.push({ pos, club: clubName(td[1]), pts: num(2), j: num(3), g: num(4), n: num(5), p: num(6), diff: num(7) });
+    const KEYS = [["pts", /points/], ["j", /jou/], ["g", /gagn/], ["n", /nul/], ["p", /perdu/], ["diff", /diff/], ["club", /club/], ["pos", /rang/]];
+    for (const table of Array.from(doc.querySelectorAll("table"))) {
+      // colonnes d'après les titres d'en-tête (colspan compris), sinon disposition simple par défaut
+      let col = { pos: 0, club: 1, pts: 2, j: 3, g: 4, n: 5, p: 6, diff: 7 };
+      const ths = Array.from(table.querySelectorAll("th"));
+      if (ths.length) {
+        const m = {}; let i = 0;
+        for (const th of ths) {
+          const t = plain((th.getAttribute("title") || "") + " " + th.textContent);
+          const k = KEYS.find(([, re]) => re.test(t));
+          const span = parseInt(th.getAttribute("colspan") || "1", 10) || 1;
+          if (k && m[k[0]] === undefined) m[k[0]] = k[0] === "club" ? i + span - 1 : i;
+          i += span;
+        }
+        if (m.pts !== undefined && m.j !== undefined) col = Object.assign({ pos: 0 }, m);
+      }
+      for (const tr of Array.from(table.querySelectorAll("tr"))) {
+        const cells = Array.from(tr.querySelectorAll("td"));
+        if (cells.length < 6) continue;
+        const td = cells.map(x => sp(x.textContent));
+        const up = tr.querySelector(".to-uppercase");
+        const club = clubName(up ? up.textContent : td[col.club] || "");
+        const num = k => col[k] === undefined || td[col[k]] === undefined ? 0 : parseInt(td[col[k]].replace(/[^\d-]/g, ""), 10) || 0;
+        const pos = num("pos");
+        if (!pos || !club || out.some(r => r.club === club)) continue;
+        out.push({ pos, club, pts: num("pts"), j: num("j"), g: num("g"), n: num("n"), p: num("p"), diff: num("diff") });
+      }
+      if (out.length >= 10) break;
     }
     return out;
   }
