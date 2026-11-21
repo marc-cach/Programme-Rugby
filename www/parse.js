@@ -131,5 +131,32 @@
     return out;
   }
 
+  // Classement (sports.orange.fr) -> [{ pos, club, pts, j, g, n, p, diff }]
+  // Les noms Orange sont ramenés aux noms d'agendatv-rugby.com pour que les favoris correspondent.
+  const ALIAS = {
+    "stade toulousain": "Toulouse", "section paloise": "Pau", "bordeaux begles": "UBB Bordeaux", "lyon": "Lyon OU",
+    "stade rochelais": "La Rochelle", "aviron bayonnais": "Bayonne", "stade francais": "Stade Francais", "provence": "Provence Rugby",
+    "stade aurillacois": "Aurillac", "us montalbanaise": "Montauban", "biarritz olympique": "Biarritz", "soyaux angouleme": "Angouleme",
+    "us dax": "Dax", "rc narbonnais": "Narbonne", "beziers herault": "Beziers", "asm clermont": "Clermont", "rc toulon": "Toulon",
+    "usa perpignan": "Perpignan", "castres olympique": "Castres", "rc vannes": "Vannes", "su agen": "Agen", "ca brive": "Brive",
+    "montpellier herault rugby": "Montpellier", "fc grenoble": "Grenoble", "us oyonnax": "Oyonnax", "colomiers rugby": "Colomiers",
+    "stade nicois": "Nice", "uso nevers": "Nevers"
+  };
+  function clubName(s) { s = sp(s); return ALIAS[plain(s)] || s; }
+  function parseClassement(html, DP) {
+    const doc = new (DP || root.DOMParser)().parseFromString(html, "text/html");
+    const out = [];
+    for (const tr of Array.from(doc.querySelectorAll("table.classement tr, table tr"))) {
+      const td = Array.from(tr.querySelectorAll("td")).map(x => sp(x.textContent));
+      if (td.length < 8) continue;
+      const pos = parseInt(td[0], 10), num = i => parseInt(td[i].replace(/[^\d-]/g, ""), 10);
+      if (!pos || !td[1]) continue;
+      if (out.some(r => r.pos === pos && r.club === clubName(td[1]))) continue;
+      out.push({ pos, club: clubName(td[1]), pts: num(2), j: num(3), g: num(4), n: num(5), p: num(6), diff: num(7) });
+    }
+    return out;
+  }
+
   root.parseRugby = parseRugby;
+  root.parseClassement = parseClassement;
 })(typeof window !== "undefined" ? window : globalThis);

@@ -1,6 +1,6 @@
 # Mon Prog Rugby
 
-Programme des matchs de rugby à la télé, avec équipes favorites. L'appli lit le programme sur agendatv-rugby.com à chaque ouverture.
+Programme des matchs de rugby à la télé, avec équipes favorites et classements Top 14 / Pro D2. L'appli lit le programme sur agendatv-rugby.com et les classements sur sports.orange.fr à chaque ouverture.
 
 ## Installer sur Android
 
